@@ -2,7 +2,7 @@
 ## Description:
 This Project was built using IntelliJ IDE, Java version 21 for Windows, and MongoDB as a database.
 
-Using the BiblioConnect app is very simple, using a command line interface and given options shown in the terminal, the user chooses, using the number pad, where to navigate to different parts of the project. The library management system is designed to help librarians effectively manage books, patrons, and transactions. Meanwhile, the literary social network is designed to help users connect and socialize with one another in groups, discussions, meetings, and events. Additionally, the user can add their favorite book or genre, and add friends to their profile. The program provides a user-friendly interface for performing various library operations or social networking.
+Using the BiblioConnect app is very simple, using a command line interface and given options shown in the terminal, the user chooses, using the number pad, where to navigate to different parts of the program. The library management system is designed to help librarians effectively manage books, patrons, and transactions. Meanwhile, the literary social network is designed to help users connect and socialize with one another in groups, discussions, meetings, and events. Additionally, the user can add their favorite book or genre, and add friends to their profile. The program provides a user-friendly interface for performing various library operations or social networking and gracefully handles errors such as incorrect inputs.
 
 ## Specifications
 ### Library Management System
