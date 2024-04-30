@@ -20,7 +20,7 @@ public class NetworkUI {
         System.out.println("\\ \\ \\____  \\ \\ \\  \\/_/\\ \\/ \\ \\  __\\   \\ \\  __<   \\ \\  __ \\  \\ \\  __<   \\ \\____ \\  ");
         System.out.println(" \\ \\_____\\  \\ \\_\\    \\ \\_\\  \\ \\_____\\  \\ \\_\\ \\_\\  \\ \\_\\ \\_\\  \\ \\_\\ \\_\\  \\/\\_____\\ ");
         System.out.println("  \\/_____/   \\/_/     \\/_/   \\/_____/   \\/_/ /_/   \\/_/\\/_/   \\/_/\\/_/   \\/_____/  ");
-        System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t Social Network! v1.0\n");
+        System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t Social Network! v1.1\n");
         //Menu Text
         System.out.println("Select an Option:");
         //System.out.println("0. Debug");
@@ -84,27 +84,112 @@ public class NetworkUI {
             System.out.println("--------------------------");
             System.out.println("\t User Profiles");
             System.out.println("--------------------------");
-            //Menu Text
+            //Input Text
             System.out.print("\nEnter Patron ID: ");
             patronId = scanner.nextLine();
-            clearScreen();
-            network.userProfile(patronId);
-        } else {
-            clearScreen();
-            network.userProfile(patronId);
+            boolean searched = network.searchPatron(patronId);
+            if (!searched) {
+                handleUserInput();
+                return;
+            }
+        }
+        String patronName = network.getPatronName();
+        //Menu Text
+        clearScreen();
+        boolean contLoop = true;
+        boolean exit = false;
+        while (!exit) {
+            //Title Text
+            System.out.println("-------------------------");
+            System.out.println(patronName + "'s Profile");
+            System.out.println("-------------------------");
+            //Secondary Menu Text
+            System.out.println("Select an Option:");
+            System.out.println(" 1. Favorite Book");
+            System.out.println(" 2. Favorite Genres");
+            System.out.println(" 3. Friends List");
+            System.out.println(" 4. Go Back");
+            contLoop = true;
+            //Input Text
+            while (contLoop) {
+                System.out.print("\nEnter your choice: ");
+                int choice = getIntInput();
+                scanner.nextLine();
+                System.out.print("");
+
+                switch (choice) {
+                    case 1:
+                        network.profileFavBooks();
+                        contLoop = false;
+                        break;
+                    case 2:
+                        network.profileFavGenres();
+                        contLoop = false;
+                        break;
+                    case 3:
+                        network.profileFriendsList();
+                        contLoop = false;
+                        break;
+                    case 4:
+                        contLoop = false;
+                        exit = true;
+                        clearScreen();
+                        break;
+                    default:
+                        System.out.println("Invalid choice. Please try again.");
+                }
+            }
         }
         //Exit Text
         handleUserInput();
     }
 
     private void groupsNDiscussions() {
-        network.groupsNDiscussions();
+        boolean contLoop = true;
+        boolean exit = false;
+        while (!exit) {
+            //Title Text
+            System.out.println("------------------------------");
+            System.out.println("\tGroups and Discussions");
+            System.out.println("------------------------------");
+            //Menu Text
+            System.out.println("Select an Option:");
+            System.out.println(" 1. View Groups");
+            System.out.println(" 2. View Discussions");
+            System.out.println(" 3. Go Back");
+            contLoop = true;
+            //Input Text
+            while (contLoop) {
+                System.out.print("\nEnter your choice: ");
+                int choice = getIntInput();
+                scanner.nextLine();
+                System.out.print("");
+
+                switch (choice) {
+                    case 1:
+                        network.groups();
+                        contLoop = false;
+                        break;
+                    case 2:
+                        network.discussions();
+                        contLoop = false;
+                        break;
+                    case 3:
+                        contLoop = false;
+                        exit = true;
+                        clearScreen();
+                        break;
+                    default:
+                        System.out.println("Invalid choice. Please try again.");
+                }
+            }
+        }
         //Exit Text
         handleUserInput();
     }
 
     private void eventsNMeetups() {
-        network.eventsNMeetups();
+        network.events();
         //Exit Text
         handleUserInput();
     }
