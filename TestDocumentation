@@ -1,0 +1,195 @@
+BiblioConnect Test Documentation
+Upon startup were greeted with-
+ ______     __     ______     __         __     ______    
+/\  == \   /\ \   /\  == \   /\ \       /\ \   /\  __ \   
+\ \  __<   \ \ \  \ \  __<   \ \ \____  \ \ \  \ \ \/\ \  
+ \ \_____\  \ \_\  \ \_____\  \ \_____\  \ \_\  \ \_____\ 
+  \/_____/   \/_/   \/_____/   \/_____/   \/_/   \/_____/ 
+ ______     ______     __   __     __   __     ______     ______     ______  
+/\  ___\   /\  __ \   /\ "-.\ \   /\ "-.\ \   /\  ___\   /\  ___\   /\__  _\ 
+\ \ \____  \ \ \/\ \  \ \ \-.  \  \ \ \-.  \  \ \  __\   \ \ \____  \/_/\ \/ 
+ \ \_____\  \ \_____\  \ \_\\"\_\  \ \_\\"\_\  \ \_____\  \ \_____\    \ \_\ 
+  \/_____/   \/_____/   \/_/ \/_/   \/_/ \/_/   \/_____/   \/_____/     \/_/ 
+												  BiblioConnect System: v1.0
+
+Select an Option:
+ 1. Library Management System
+ 2. Literary Social Network
+ 3. Exit
+
+Entering each of the numbered choices brings us similar submenus:
+Welcome to the
+ __         __     ______     ______     ______     ______     __  __    
+/\ \       /\ \   /\  == \   /\  == \   /\  == \   /\  == \   /\ \_\ \   
+\ \ \____  \ \ \  \ \  __<   \ \  __<   \ \  __ \  \ \  __<   \ \____ \  
+ \ \_____\  \ \_\  \ \_____\  \ \_\ \_\  \ \_\ \_\  \ \_\ \_\  \/\_____\ 
+  \/_____/   \/_/   \/_____/   \/_/ /_/   \/_/\/_/   \/_/ /_/   \/_____/  
+												 Management System! v2.0
+
+Select an Option:
+ 1. Add Book
+ 2. Register Patron
+ 3. Check Out Book
+ 4. Return Book
+ 5. Main Menu
+
+
+
+
+
+
+
+
+
+1: Adding a Book:
+------------------------
+	Add Book
+------------------------
+
+Enter ISBN: 123
+Enter Title: 123
+Enter Author: 123
+Enter Genre: 123
+Is this book fictional? (true/false): true
+
+----------------------------------------
+    The book was added successfully!
+----------------------------------------
+
+Then goes back to previous menu…
+
+2: Register Patron
+------------------------
+    Register Patron
+------------------------
+
+Enter Patron Name: will
+Enter Password: asdada
+Enter Patron Contact Info: asddada
+Are You a Student or Faculty Patron? (student/faculty/none): student
+Enter a Student ID: 123
+
+-------------------------------------------
+	Patron was registered successfully!
+-------------------------------------------
+Your Patron ID is: 6
+-------------------------------------------
+Then goes back to previous menu…
+
+3: Check Out Book
+------------------------
+    Check Out Book
+------------------------
+
+Enter Patron ID: 6
+Enter Book ISBN: 123
+---------------------------------------------
+    The book was checked out successfully!
+---------------------------------------------
+The book, Mind-blowing Space Facts, has been borrowed by patron, will
+Your Transaction ID is: 6
+----------------------------------------------
+Then goes back to previous menu…
+
+
+4: Return Book
+
+
+------------------------
+      Return Book
+------------------------
+
+Enter Transaction ID: 6
+
+-----------------------------------------------
+      The book was returned successfully!
+-----------------------------------------------
+The book, Mind-blowing Space Facts, has been returned by patron, will
+-----------------------------------------------
+
+Then goes back to previous menu…
+
+Which is the end of Library menu options.
+
+
+Literacy Social Network
+
+
+Welcome to the
+ __         __     ______   ______     ______     ______     ______     __  __    
+/\ \       /\ \   /\__  _\ /\  ___\   /\  == \   /\  == \   /\  == \   /\ \_\ \   
+\ \ \____  \ \ \  \/_/\ \/ \ \  __\   \ \  __<   \ \  __ \  \ \  __<   \ \____ \  
+ \ \_____\  \ \_\    \ \_\  \ \_____\  \ \_\ \_\  \ \_\ \_\  \ \_\ \_\  \/\_____\ 
+  \/_____/   \/_/     \/_/   \/_____/   \/_/ /_/   \/_/\/_/   \/_/\/_/   \/_____/  
+															 Social Network! v1.1
+
+Select an Option:
+ 1. User Profiles
+ 2. Groups and Discussions
+ 3. Events and Meetups
+ 4. Sign-In
+ 5. Main Menu
+
+1: User Profiles
+ -------------------------
+will's Profile
+-------------------------
+Select an Option:
+ 1. Favorite Book
+ 2. Favorite Genres
+ 3. Friends List
+ 4. Go Back
+
+
+2: Groups and Discussions
+
+------------------------------
+	Groups and Discussions
+------------------------------
+Select an Option:
+ 1. View Groups
+ 2. View Discussions
+ 3. Go Back
+
+
+
+ 
+3: Events and Meetups
+------------------------------------------------
+			  Events and Meetings
+------------------------------------------------
+All Events:
+	- Jesus: Program presentation @ Virtual, during 4/30/24, 9:00pm
+------------------------------------------------
+Enter event name to view (Enter to Skip): 
+
+
+
+ 4: Sign-In
+
+------------------------------
+   Successfully Signed In
+------------------------------
+Hello, will!
+Welcome to the
+ __         __     ______   ______     ______     ______     ______     __  __    
+/\ \       /\ \   /\__  _\ /\  ___\   /\  == \   /\  == \   /\  == \   /\ \_\ \   
+\ \ \____  \ \ \  \/_/\ \/ \ \  __\   \ \  __<   \ \  __ \  \ \  __<   \ \____ \  
+ \ \_____\  \ \_\    \ \_\  \ \_____\  \ \_\ \_\  \ \_\ \_\  \ \_\ \_\  \/\_____\ 
+  \/_____/   \/_/     \/_/   \/_____/   \/_/ /_/   \/_/\/_/   \/_/\/_/   \/_____/  
+															 Social Network! v1.1
+
+Select an Option:
+ 1. User Profiles
+ 2. Groups and Discussions
+ 3. Events and Meetups
+ 4. Sign-Out
+ 5. Main Menu
+
+Test Cases of unpredicted input 
+
+Ex. “0”: simply redisplays : “Enter your choice:”
+
+Ex. “g” displays: “Invalid input. Please enter a number.”
+
+Input is handled the same away in every menu.
