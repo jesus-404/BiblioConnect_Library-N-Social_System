@@ -56,6 +56,10 @@ Select an Option:
 
 Enter your choice: 1
 
+------------------------
+        Add Book
+------------------------
+
 Enter ISBN: 123
 Enter Title: Cool Space Facts
 Enter Author: Neil Armstrong
