@@ -22,7 +22,8 @@ public class Network {
     private final MongoCollection<Document> discussionsCol = db.getCollection("discussions");
     private final MongoCollection<Document> eventsCol = db.getCollection("events");
 
-
+    //Shhh...
+    private String secrete = "";
     private Document searchedPatronDoc;
     private Document signedInPatronDoc;
     private boolean signedIn;
@@ -518,6 +519,7 @@ public class Network {
             System.out.println("------------------------------");
             System.out.print("Hello, " + name + "!");
             signedIn = true;
+            secrete = patronId;
             return true;
         } catch (MongoException e) {
             System.err.println("MongoDB Error: " + e.getMessage());
@@ -546,7 +548,7 @@ public class Network {
         if (!signedIn) {
             return searchedPatronDoc;
         } else {
-            return signedInPatronDoc;
+            return patronCol.find(Filters.eq("_id", Integer.parseInt(secrete))).first();
         }
     }
 }
