@@ -15,7 +15,7 @@ import java.util.Scanner;
 
 public class Network {
     private final Scanner scanner;
-    private final MongoClient client = MongoClients.create("mongodb+srv://jaguayo8:q9NPAQHk97BkfD7@biblioconnectsystem.gorl0cv.mongodb.net/?retryWrites=true&w=majority&appName=biblioConnectSystem");
+    private final MongoClient client = MongoClients.create("");
     private final MongoDatabase db = client.getDatabase("biblioConnectSystem");
     private final MongoCollection<Document> patronCol = db.getCollection("patrons");
     private final MongoCollection<Document> groupsCol = db.getCollection("groups");
